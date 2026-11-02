@@ -1,9 +1,6 @@
 # Polarity Marketplace
 
-The list of add-ons shown in Polarity under **Settings → Marketplace**. The app
-reads [`addons.json`](addons.json) straight from this repository, so a merged
-pull request shows up for everyone within a few hours, no app update needed.
-
+The list of add-ons shown in Polarity under **Settings → Marketplace**. 
 ## Adding an add-on
 
 1. Fork this repo and add an entry to `addons.json`:
@@ -20,7 +17,7 @@ pull request shows up for everyone within a few hours, no app update needed.
    }
    ```
 
-2. Run `node scripts/validate.mjs` (Node 20+, no install needed).
+2. Run `node scripts/validate.mjs` 
 3. Open a pull request.
 
 | Field | |
