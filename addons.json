@@ -1,0 +1,88 @@
+{
+  "$schema": "./schema.json",
+  "version": 1,
+  "addons": [
+    {
+      "id": "org.stremio.opensubtitlesv3",
+      "name": "OpenSubtitles",
+      "author": "OpenSubtitles",
+      "about": "Subtitles in dozens of languages for movies and series, found for you as soon as you start watching.",
+      "category": "Subtitles",
+      "tags": [
+        "subtitles",
+        "captions",
+        "languages",
+        "official"
+      ],
+      "manifest": "https://opensubtitles-v3.strem.io/manifest.json",
+      "homepage": "https://www.opensubtitles.com"
+    },
+    {
+      "id": "community.opensubtitlesv3.pro",
+      "name": "OpenSubtitles PRO",
+      "author": "dexter21767",
+      "about": "OpenSubtitles with your own account: better matching, more results and AI-translated subtitles when nothing else exists.",
+      "category": "Subtitles",
+      "tags": [
+        "subtitles",
+        "captions",
+        "opensubtitles",
+        "account",
+        "translation"
+      ],
+      "manifest": "https://opensubtitlesv3-pro.dexter21767.com/manifest.json",
+      "configure": "https://opensubtitlesv3-pro.dexter21767.com/configure",
+      "setupRequired": true
+    },
+    {
+      "id": "community.subdl.subtitles",
+      "name": "SubDL",
+      "author": "SubDL",
+      "about": "A large subtitle library with strong coverage of anime and non-English releases. Needs a free SubDL API key.",
+      "category": "Subtitles",
+      "tags": [
+        "subtitles",
+        "captions",
+        "anime",
+        "languages"
+      ],
+      "manifest": "https://subdl.strem.top/manifest.json",
+      "configure": "https://subdl.strem.top/configure",
+      "setupRequired": true,
+      "homepage": "https://subdl.com"
+    },
+    {
+      "id": "community.subsource.subtitles",
+      "name": "SubSource",
+      "author": "SubSource",
+      "about": "Community-made subtitles, often the first place new episodes get them. Needs a free SubSource API key.",
+      "category": "Subtitles",
+      "tags": [
+        "subtitles",
+        "captions",
+        "community",
+        "anime"
+      ],
+      "manifest": "https://subsource.strem.top/manifest.json",
+      "configure": "https://subsource.strem.top/configure",
+      "setupRequired": true,
+      "homepage": "https://subsource.net"
+    },
+    {
+      "id": "org.stremio.watchhub",
+      "name": "WatchHub",
+      "author": "Stremio",
+      "about": "Where a title is streaming legally (Netflix, Prime Video, Disney+ and more), opened in the service's own app or site.",
+      "category": "Streams",
+      "tags": [
+        "streaming services",
+        "netflix",
+        "prime video",
+        "disney",
+        "legal",
+        "official"
+      ],
+      "manifest": "https://watchhub.strem.io/manifest.json"
+    }
+  ]
+}

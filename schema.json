@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/unzoid/polarity-addons/main/schema.json",
+  "title": "Polarity Marketplace",
+  "type": "object",
+  "required": ["version", "addons"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "const": 1 },
+    "addons": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/addon" }
+    }
+  },
+  "$defs": {
+    "addon": {
+      "type": "object",
+      "required": ["id", "name", "author", "about", "category", "manifest"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The add-on's own manifest id. Must match the `id` in its manifest.json."
+        },
+        "name": { "type": "string", "maxLength": 40 },
+        "author": { "type": "string", "maxLength": 40 },
+        "about": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "One or two plain sentences: what it adds and anything it needs (an account, an API key)."
+        },
+        "category": {
+          "enum": ["Subtitles", "Streams", "Metadata", "Catalogs"],
+          "description": "Catalogs are listed but only shown by app versions that support add-on catalogs."
+        },
+        "tags": { "type": "array", "items": { "type": "string" }, "maxItems": 8 },
+        "manifest": {
+          "type": "string",
+          "pattern": "^https://.+/manifest\\.json$",
+          "description": "HTTPS URL of the add-on's manifest.json, installable as-is. For add-ons that need setup first, the unconfigured manifest."
+        },
+        "configure": {
+          "type": "string",
+          "pattern": "^https://",
+          "description": "The add-on's setup page, for add-ons that need an account or key. After setting up, people paste the link it gives them into Add-ons → Install from URL."
+        },
+        "setupRequired": {
+          "type": "boolean",
+          "description": "True when the add-on can't be installed until it's set up on its `configure` page (its manifest's behaviorHints.configurationRequired)."
+        },
+        "homepage": { "type": "string", "pattern": "^https://" },
+        "minAppVersion": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Hide from app versions older than this."
+        }
+      }
+    }
+  }
+}
